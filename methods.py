@@ -1,3 +1,5 @@
+import random
+
 # функция проверки ввода целого числа (положительного или отрицательного)
 # со счетчиком неверных попыток ввода и автоматическим закрытием программы
 # при их превышении
@@ -24,6 +26,14 @@ def check_value_is_digit_and_return_it(input_value:str):
             exit()
     return number
 
+# функция запрашивает количество элементов в списке, а потом формирует его из рандомных элементов
+def make_new_random_list_numbers ():
+    elem_number = check_value_is_digit_and_return_it ("Please input number of list elements: ")
+    random_list_numbers = []
+    for i in range(elem_number):
+        random_list_numbers.append(random.randint(0, 100))
+    return random_list_numbers
+
 # функция счетчика неверных попыток ввода с автоматическим закрытием программы
 # при их превышении 
 def input_options (
@@ -44,3 +54,5 @@ def input_options (
             print(f'Wrong input. You have {2-count} input attempts left ')
             count +=1
     return option_value
+
+# print(make_new_random_list_numbers ())
