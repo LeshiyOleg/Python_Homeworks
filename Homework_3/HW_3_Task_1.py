@@ -6,7 +6,7 @@
 
 import random
 from methods import check_value_is_digit_and_return_it as check
-from methods import make_new_random_list_numbers as make_list
+from methods import make_new_random_list_int_numbers as make_list
 
 # функция проверяет на четность индекс элемента списка и находит сумму нечетных элементов
 def find_sum_odd_element_positions (list_to_find):

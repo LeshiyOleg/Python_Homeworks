@@ -9,7 +9,7 @@
 
 import random
 from methods import check_value_is_digit_and_return_it as check
-from methods import make_new_random_list_numbers as make_list
+from methods import make_new_random_list_int_numbers as make_list
 
 def get_list_multiply_pairs (list_to_find):
     mult_pairs_list = []
