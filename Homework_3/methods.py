@@ -1,5 +1,24 @@
 import random
 
+# функция проверки ввода целого положительного числа (N >= 0)
+# со счетчиком неверных попыток ввода и автоматическим закрытием программы
+# при их превышении
+
+def check_value_is_positive_integer_and_return_it(input_value:str):
+    count = 1
+    while True:
+        value = input(input_value)
+        if value.isdigit():
+            number = int(value)
+            break
+        elif count < 3:
+            print(f"This is not correct number --> Try again\nYou have {3-count} input attempts left")
+            count += 1
+        else:
+            print("Exceeded number of input attempts. Think what you're doing wrong --> Closing the program")
+            exit()
+    return number
+
 # функция проверки ввода целого числа (положительного или отрицательного)
 # со счетчиком неверных попыток ввода и автоматическим закрытием программы
 # при их превышении
