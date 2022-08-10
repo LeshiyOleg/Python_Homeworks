@@ -88,6 +88,21 @@ def take_values_from_file_and_make_numbers_list (file_name:str)-> list:
         list_of_numbers[i] = int(list_of_numbers[i])
     return list_of_numbers
 
+# функция читает данные (строковые) из файла и создает список из этих строк (слов)
+def take_data_from_file_and_make_words_list (file_name:str)-> list: 
+    file = open(file_name, 'r', encoding = 'utf-8')
+    date = file.read()
+    list_of_words = date.split()
+    file.close()
+    return list_of_words
+
+# функция создает файл (название указывается как аргумент) и записывает в него строку
+def write_string_in_file (file_name:str): 
+    words_string = input ("Input a string which you'd like to write in file: ")
+    file = open(file_name, 'w')
+    file.write(words_string)
+    file.close()
+
 # функция сортирует список из целых чисел по возрастанию
 def get_sorted_list (list_to_sort: list)-> list:
     k = 0
