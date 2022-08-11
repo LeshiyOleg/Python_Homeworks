@@ -99,7 +99,7 @@ def take_data_from_file_and_make_words_list (file_name:str)-> list:
 # функция создает файл (название указывается как аргумент) и записывает в него строку
 def write_string_in_file (file_name:str): 
     words_string = input ("Input a string which you'd like to write in file: ")
-    file = open(file_name, 'w')
+    file = open(file_name, 'w', encoding = 'utf-8')
     file.write(words_string)
     file.close()
 
