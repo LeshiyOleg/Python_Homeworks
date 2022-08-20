@@ -16,12 +16,12 @@ import random
 #     rest_amount = total_amount
 #     while rest_amount > 0:
 #         step_amount = check(f'\nThe rest is {rest_amount}. \n{players[0]} Input amount of candies for your turn: ')
-#         if step_amount <= step_max_amount:
+#         if 0 < step_amount <= step_max_amount:
 #             rest_amount -= step_amount
 #             players[0], players[1] = players[1], players[0]
 #             game_candies(rest_amount, step_max_amount, players)
 #         else:
-#             print (f'Input 0 <= amount <= {step_max_amount}!!!')
+#             print (f'Input 1 <= amount <= {step_max_amount}!!!')
 #     else:
 #         print (f'\nThe winner is {players[0]}')
 #         exit()
@@ -47,12 +47,12 @@ import random
 #         else:
 #             step_amount = random.randint(1,step_max_amount)
 #             print(f'\nThe rest is {rest_amount}. \n{players[0]} has taken {step_amount} candies')
-#         if step_amount <= step_max_amount:
+#         if 0 < step_amount <= step_max_amount:
 #             rest_amount -= step_amount
 #             players[0], players[1] = players[1], players[0]
 #             game_candies_vs_bot(rest_amount, step_max_amount, players)
 #         else:
-#             print (f'Input 0 <= amount <= {step_max_amount}!!!')
+#             print (f'Input 1 <= amount <= {step_max_amount}!!!')
 
 #     else:
 #         print (f'\nThe winner is {players[0]}')
@@ -81,7 +81,7 @@ def game_candies_vs_clever_bot (total_amount, step_max_amount, players):
             if step_amount == 0:
                 step_amount = 1
             print(f'\nThe rest is {rest_amount}. \n{players[0]} has taken {step_amount} candies')
-        if step_amount <= step_max_amount:
+        if 0 < step_amount <= step_max_amount:
             rest_amount -= step_amount
             players[0], players[1] = players[1], players[0]
             game_candies_vs_clever_bot(rest_amount, step_max_amount, players)

@@ -32,3 +32,14 @@ file.close()
 
 print (" ".join(list_to_find))
 print(" ".join(find_word_in_text(list_to_find)))
+
+
+# Добавил осле просмотра семинара:
+# s = 'абвгдейка - это передача'
+# def filter_text(text):
+#     text = text.split(' ')
+#     func = lambda word: 'абв' not in word
+#     return ' '.join(list(filter(func, text)))
+# print(filter_text(s))
+
+# print(" ".join(list(filter(lambda word: 'абв' not in word, s.split()))))
