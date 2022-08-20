@@ -78,6 +78,14 @@ def get_list_of_numbers_as_str_and_write_in_file (number_N: int, file_name:str) 
     file.close()
     return list_of_numbers
 
+# функция читает данные (строку) из файла и создает список из всех символов
+def take_data_from_file_and_make_chars_list (file_name:str)-> list: 
+    file = open(file_name, 'r', encoding = 'utf-8')
+    data = file.read()
+    list_of_words = list(data)
+    file.close()
+    return list_of_words
+
 # функция читает данные (целые числа) из файла и создает список из этих чисел
 def take_values_from_file_and_make_numbers_list (file_name:str)-> list: 
     file = open(file_name, 'r')
@@ -101,6 +109,12 @@ def write_string_in_file (file_name:str):
     words_string = input ("Input a string which you'd like to write in file: ")
     file = open(file_name, 'w', encoding = 'utf-8')
     file.write(words_string)
+    file.close()
+
+# функция создает файл и записывает в него строку (название файла и строка указываются как аргумент) 
+def write_in_file (string_data:str, file_name:str): 
+    file = open(file_name, 'w', encoding = 'utf-8')
+    file.write(string_data)
     file.close()
 
 # функция сортирует список из целых чисел по возрастанию
